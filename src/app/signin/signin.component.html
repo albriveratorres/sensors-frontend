@@ -1,0 +1,48 @@
+<div class="diagonal-gradient">
+  <div class="card-center">
+    <div class="card">
+      <form [formGroup]="formUser" (ngSubmit)="signIn()">
+        <div class="title"></div>
+        <div class="content">
+          <img src="../../assets/chg.png" alt="muestra" />
+          <p><b class="text-color-deep-blue">Bienvenido</b></p>
+          <div>
+            <div class="input-group">
+              <input
+                formControlName="email"
+                class="form-input"
+                type="text"
+                placeholder="Direccion de correo"
+              />
+              <div class="validation-danger" [hidden]="email.valid || email.pristine">*Requerido</div>
+            </div>
+
+            <div class="input-group">
+              <input
+                formControlName="password"
+                class="form-input"
+                type="password"
+                placeholder="Password"
+              />
+              <div class="validation-danger" [hidden]="password.valid || password.pristine">*Requerido</div>
+            </div>
+          </div>
+          <div class="input-group">
+            <input
+              class="input-checked"
+              type="checkbox"
+              name="recordar_email"
+              id="recordar_email"
+            />
+            <label class="fs-16" for="recordar_email">Recordar Usuario</label>
+          </div>
+          <div class="input-group">
+            <button class="btn primary" type="submit" [disabled]="formUser.invalid">iniciar</button>
+            <button class="btn secondary">Registrar</button>
+          </div>
+        </div>
+      </form>
+      <div class="footer"></div>
+    </div>
+  </div>
+</div>

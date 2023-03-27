@@ -1,0 +1,26 @@
+.container{
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  /* max-width: 25em; */
+  margin: auto;
+  border: 0.2em;
+}
+nav{
+  display: flex;
+  position: absolute;
+  padding: 2em;
+  background-color: #004561;
+  color: #f4f4f4;
+}
+a{
+  white-space: pre;
+  color: #f4f4f4;
+}
+p{
+  font-size: 2em;
+  text-align: center;
+}
+

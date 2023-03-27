@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.text-color-deep-blue{
+  color: #05436f;
+}
+.input-group{
+  display: inline-block;
+  /* min-width: 100px; */
+}
+.form-input{
+  border: 1px gray;
+  box-shadow: 2px 2px 12px 2px gray;
+  background-color: #f4f4f4;
+  padding: 14px 100px;
+  font-size: 16px;
+  /* e50069 este es el color que estaba en la plantilla pero es rojo o rosa no es correcto */
+}
+.btn {
+  /* border: none; */
+  color: white;
+  padding: 14px 73px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.primary{
+  background-color: #004561;
+  border: none;
+}
+.secondary{
+  background-color: #f4f4f4;
+  border-color: gray;
+  border: 1px solid gray;
+  color: gray;
+}
+.input-checked{
+  height: 20px;
+  width: 20px;
+  /* text-align: right !important; */
+}
+.fs-16{
+  font-size: 16px;
+}
+.validation-danger{
+  font-size: 16px;
+  color: red;
+}
+
+
