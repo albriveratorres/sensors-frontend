@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -16,21 +17,18 @@ export class SigninComponent {
     return this.formUser.get('password') as FormControl;
   }
 
+  private URL = 'http://localhost:3000/api/v1/users/'
+
   formUser = new FormGroup({
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
 
-  constructor(public router: Router) {}
+  constructor(private http: HttpClient, public router: Router) {}
 
   signIn() {
-    const email :string = 'pablo_picasso@ecosat.com.mx';
-    const password: string | number = '123456';
-    if (
-      this.formUser.value.email == email &&
-      this.formUser.value.password === password)
-     {
-      this.router.navigateByUrl('/dashboard');
-    }
+
+    return this.http.post<any>(this.URL, this.formUser.value)
+
   }
 }
